@@ -1,0 +1,11 @@
+def get_toppers(scores_dataset,subject,gender):
+    score=[]
+    name=[]
+    for i in range(len(scores_dataset)):
+        score.append(scores_dataset[1][subject])
+    max_score=max(score)
+    for i in range(len(score_dataset)):
+        if(scores_dataset[i]['Gender']==gender):
+            if(scores_dataset[i][subject]==max_score):
+                name.append(scores_dataset[i]['name'])
+    return name            
