@@ -29,3 +29,21 @@ def freq_to_words(words):
 
     return freq_to_words_dict
 
+next program
+
+def two_level_sort(scores):
+    # Level-1 sorting: Sort the list of tuples based on marks in ascending order
+    for i in range(len(scores)):
+        for j in range(i + 1, len(scores)):
+            if scores[i][1] > scores[j][1]:
+                scores[i], scores[j] = scores[j], scores[i]
+
+    # Level-2 sorting: Sort the students with equal marks alphabetically by their names
+    for i in range(len(scores) - 1):
+        j = i + 1
+        while j < len(scores) and scores[i][1] == scores[j][1]:
+            if scores[i][0] > scores[j][0]:
+                scores[i], scores[j] = scores[j], scores[i]
+            j += 1
+
+    return scores
