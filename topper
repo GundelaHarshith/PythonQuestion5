@@ -82,7 +82,7 @@ def merge(D1, D2, priority):
         return D2
 next program
 
-def freq_to_word(words):
+def freq_to_words(words):
     word_freq_dict = {}
     
     # Count the frequency of each word
